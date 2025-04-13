@@ -1,0 +1,154 @@
+.bannerContainer {
+    position: relative;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right,
+            #aa31f1,
+            #7973fd);
+    display: flex;
+    flex-direction: column;
+    /* 改为垂直排列 */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 6rem;
+}
+
+.content {
+    max-width: 1200px;
+    align-self: center;
+    margin: 0 6rem;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 1200px;
+    line-height: 1.6;
+}
+
+.ctaButton {
+    background-color: #0070f3;
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ctaButton:hover {
+    background-color: #0051a2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .bannerContainer {
+        padding: 0 2rem;
+    }
+
+    .content {
+        margin: 0 2rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+.svgImage {
+    width: auto;
+    height: auto;
+    max-width: 50vh;
+    justify-content: center;
+    object-fit: contain;
+}
+
+/* 移动端隐藏图片 */
+@media (max-width: 1080px) {
+    .svgImage {
+        display: none;
+    }
+
+    .contentWrapper {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .content {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+/* 新增滚动提示样式 */
+.scrollPrompt {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.scrollText {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* 移动端调整 */
+@media (max-width: 768px) {
+    .scrollPrompt {
+        bottom: 20px;
+    }
+
+    .scrollText {
+        font-size: 0.875rem;
+    }
+
+    .arrow {
+        width: 20px;
+        height: 20px;
+    }
+}
