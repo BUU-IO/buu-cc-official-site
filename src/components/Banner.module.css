@@ -80,23 +80,6 @@
     object-fit: contain;
 }
 
-/* 移动端隐藏图片 */
-@media (max-width: 1080px) {
-    .svgImage {
-        display: none;
-    }
-
-    .contentWrapper {
-        flex-direction: column;
-        padding: 0 1rem;
-    }
-
-    .content {
-        text-align: center;
-        padding: 0;
-    }
-}
-
 /* 新增滚动提示样式 */
 .scrollPrompt {
     position: absolute;
@@ -134,21 +117,5 @@
     to {
         opacity: 1;
         transform: translate(-50%, 0);
-    }
-}
-
-/* 移动端调整 */
-@media (max-width: 768px) {
-    .scrollPrompt {
-        bottom: 20px;
-    }
-
-    .scrollText {
-        font-size: 0.875rem;
-    }
-
-    .arrow {
-        width: 20px;
-        height: 20px;
     }
 }
