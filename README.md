@@ -2,6 +2,8 @@
 
 创建这个repo的是前端菜鸡练习生，急需大佬进行优化迭代
 
+20250427:印度人死全家了，把域名serverhold了，毫无通知。   
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
