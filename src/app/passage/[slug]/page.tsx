@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import fs from "fs";
 import path from "path";
 
-// 共享的文件读取函数
+// 共享的文件读取
 const getMarkdownContent = (slug: string) => {
   const filePath = path.join(process.cwd(), "content", `${slug}.md`);
   try {
@@ -33,7 +33,7 @@ export async function generateMetadata({
       title = `${titleMatch[1]} - 北京联合大学计算机社`;
     }
 
-    // 提取描述（清理 Markdown 格式后的前 150 个字符）
+    // 提取描述
     const plainText = markdownContent
       .replace(/^#.*$/gm, "")     // 移除标题
       .replace(/\*\*/g, "")       // 移除加粗
@@ -53,8 +53,10 @@ export async function generateMetadata({
 export default async function DynamicPage({ params }: { params: { slug: string } }) {
   const { slug } = await params
   return (
-    <div>
-      <MarkdownPage slug={slug} />
+    <div className="bannerContainer">
+      <div className="markdown-content-wrapper">
+        <MarkdownPage slug={slug} />
+      </div>
     </div>
   );
 }

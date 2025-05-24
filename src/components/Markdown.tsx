@@ -6,6 +6,7 @@ import "github-markdown-css/github-markdown-light.css";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github.css";
+import "@/components/markdown.css"; // 引入自定义样式
 
 export const MarkdownPage = ({ slug }: { slug: string }) => {
   const markdownFilePath = path.join(
@@ -17,7 +18,7 @@ export const MarkdownPage = ({ slug }: { slug: string }) => {
   try {
     const markdownContent = fs.readFileSync(markdownFilePath, "utf-8");
     return (
-      <div className="markdown-body">
+      <div className="markdown-body custom-markdown-style">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeHighlight]}
