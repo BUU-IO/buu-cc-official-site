@@ -2,11 +2,20 @@
 import Link from "next/link";
 import styles from "./Header.module.css"; // 新建对应的CSS模块
 import Image from "next/image"; // 首先引入Image组件
-import { useState } from "react"; // 添加状态管理
+import { useState, useEffect } from "react"; // 添加状态管理
 
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // 添加body滚动控制
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.classList.add(styles.menuOpen);
+        } else {
+            document.body.classList.remove(styles.menuOpen);
+        }
+    }, [isMenuOpen]);
 
     return (
         <header className={styles.headerContainer}>
@@ -31,9 +40,6 @@ export default function Header() {
             {/* 导航菜单 */}
             <nav className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>
                 <Link href="/about" onClick={() => setIsMenuOpen(false)}>关于我们</Link>
-                <Link href="/activities" onClick={() => setIsMenuOpen(false)}>社团活动</Link>
-                <Link href="/courses" onClick={() => setIsMenuOpen(false)}>技术课程</Link>
-                <Link href="/contact" onClick={() => setIsMenuOpen(false)}>加入我们</Link>
             </nav>
         </header>
     );

@@ -46,15 +46,17 @@
   }
 
   .navLinks {
-    position: absolute;
-    top: 100%; /* 从header底部开始 */
+    position: fixed;
+    top: 60px; /* 从header底部开始 */
     left: 0;
     right: 0;
+    height: auto; /* 高度自动 */
     flex-direction: column;
     background-color: #7973FD;
-    padding: 2rem;
+    padding: 1rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
+    overflow-y: auto; /* 允许滚动 */
     gap: 1.5rem;
     z-index: 1000; /* 保持菜单在最前 */
     height:100vh
@@ -75,6 +77,10 @@
   .logo a {
     font-size: 1rem;
   }
+  body.menu-open {
+    overflow: hidden;
+  }
+
 }
 
 .navLinks a {

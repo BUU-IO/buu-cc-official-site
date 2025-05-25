@@ -13,7 +13,6 @@ export default function Home() {
       <Header />
       <MainBanner />
       <Footer />
-      {/* 其他页面内容 */}
     </main>
   );
 }
