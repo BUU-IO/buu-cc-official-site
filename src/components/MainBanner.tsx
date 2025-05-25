@@ -24,7 +24,7 @@ const getMarkdownsList = () => {
           title: titleMatch ? titleMatch[1] : slug,
         };
       });
-  } catch (e) {
+  } catch {
     return [];
   }
 };

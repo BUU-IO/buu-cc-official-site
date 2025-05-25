@@ -27,7 +27,7 @@ export const MarkdownPage = ({ slug }: { slug: string }) => {
         </ReactMarkdown>
       </div>
     );
-  } catch (e) {
+  } catch {
     return <div>文章不存在</div>;
   }
 };
