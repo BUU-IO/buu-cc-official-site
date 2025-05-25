@@ -1,6 +1,7 @@
 import "react";
 import { MarkdownPage } from "@/components/Markdown";
 import { Metadata } from "next";
+import Header from "@/components/Header";
 import fs from "fs";
 import path from "path";
 
@@ -53,10 +54,13 @@ export async function generateMetadata({
 export default async function DynamicPage({ params }: { params: { slug: string } }) {
   const { slug } = await params
   return (
-    <div className="bannerContainer">
-      <div className="markdown-content-wrapper">
-        <MarkdownPage slug={slug} />
+    <main>
+      <Header />
+      <div className="bannerContainer">
+        <div className="markdown-content-wrapper">
+          <MarkdownPage slug={slug} />
+        </div>
       </div>
-    </div>
+    </main>
   );
 }

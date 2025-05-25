@@ -1,0 +1,151 @@
+.bannerContainer {
+  position: relative;
+  display: flex;
+  background-color: #7973fd;
+  min-height: 80vh;
+  align-items: flex-start; /* 改为顶部对齐 */
+  justify-content: space-between;
+  color: white;
+  flex-direction: row; /* 默认横向排列 */
+  padding: 6rem;
+  gap: 4rem;
+}
+
+.content {
+  max-width: 1200px;
+  align-items: center;
+  margin: 0 6rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+/* 统一链接项样式 */
+.linkItem {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.linkItem::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.linkItem:hover {
+  color: white;
+  transform: translateX(8px);
+}
+
+.moreText {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 1200px;
+  line-height: 1.6;
+}
+
+
+/* 新增响应式样式 */
+@media (max-width: 1024px) {
+  .bannerContainer {
+    padding: 4rem 2rem;
+    gap: 3rem;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerContainer {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 3rem 1.5rem;
+  }
+
+  .leftContent,
+  .rightContent {
+    width: 100%;
+    max-width: none;
+  }
+
+  .title {
+    font-size: 2rem;
+    border-bottom-width: 1px;
+  }
+
+  .linkItem {
+    font-size: 1.1rem;
+    padding-left: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerContainer {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .linkItem {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+
+  .moreText {
+    font-size: 0.9rem;
+  }
+}
+
+
+.leftContent,
+.rightContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* 移除列表默认样式 */
+.linksContainer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

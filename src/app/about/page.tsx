@@ -1,5 +1,6 @@
 import "react";
 import { About } from "@/components/About";
+import Header from "@/components/Header";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "关于我们-北京联合大学计算机社",
@@ -8,8 +9,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div>
+    <main>
+      <Header />
       <About />
-    </div>
+    </main>
   );
 }
