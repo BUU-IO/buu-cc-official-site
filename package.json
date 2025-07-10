@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.10",
+    "core-js": "^3.44.0",
     "framer-motion": "^12.6.5",
     "github-markdown-css": "^5.8.1",
     "highlight.js": "^11.11.1",
