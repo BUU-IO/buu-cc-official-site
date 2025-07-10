@@ -53,14 +53,14 @@ export default function MainBanner() {
       <div className={styles.leftContent}>
         <h1 className={styles.title}>社团服务</h1>
         <div className={styles.linksContainer}>
-          <Link href="./" className={styles.linkItem}>
-            活动申请指南
+          <Link href="https://smirror.buucc.ren" className={styles.linkItem}>
+            BUU计算机社软件镜像站
+          </Link>
+          <Link href="https://www.wjx.cn/vm/OmugQ2B.aspx# " className={styles.linkItem}>
+            BUU计算机社学术加速
           </Link>
           <Link href="./" className={styles.linkItem}>
-            场地使用规范
-          </Link>
-          <Link href="./" className={styles.linkItem}>
-            器材借用流程
+            北京联合大学WebVPN链接转换
           </Link>
           <p className={styles.moreText}>And More...</p>
         </div>
@@ -68,7 +68,7 @@ export default function MainBanner() {
 
       {/* 右侧文章列表 */}
       <div className={styles.rightContent}>
-        <h1 className={styles.title}>最新文章</h1>
+        <h1 className={styles.title}>最新文章 & 公告</h1>
         <div className={styles.linksContainer}>
           <MarkdownList />
         </div>
