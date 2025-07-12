@@ -59,7 +59,7 @@ export default function MainBanner() {
           <Link href="https://www.wjx.cn/vm/OmugQ2B.aspx# " className={styles.linkItem}>
             BUU计算机社学术加速
           </Link>
-          <Link href="./" className={styles.linkItem}>
+          <Link href="./wvpn/" className={styles.linkItem}>
             北京联合大学WebVPN链接转换
           </Link>
           <p className={styles.moreText}>And More...</p>

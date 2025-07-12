@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.10",
+    "axios": "^1.10.0",
     "core-js": "^3.44.0",
     "framer-motion": "^12.6.5",
     "github-markdown-css": "^5.8.1",
     "highlight.js": "^11.11.1",
-    "next": "15.3.0",
+    "next": "^15.3.5",
     "postcss-import": "^16.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
