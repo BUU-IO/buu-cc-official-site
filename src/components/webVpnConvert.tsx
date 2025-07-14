@@ -73,7 +73,7 @@ export default function WebVpnConvert() {
         setCopied(false);
         copyTimeoutRef.current = null;
       }, 3000);
-    } catch (err) {
+    } catch {
       setError('复制失败，请手动复制');
     }
   };
