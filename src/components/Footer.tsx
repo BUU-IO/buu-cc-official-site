@@ -25,7 +25,7 @@ export default function Footer() {
             />
           </Link>
           <Image
-            src="SengineTechLogo.svg"
+            src="../SengineTechLogo.svg"
             alt="Sponsor Logo"
             width={175}
             height={39}

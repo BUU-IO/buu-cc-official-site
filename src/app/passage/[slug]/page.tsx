@@ -2,6 +2,7 @@ import "react";
 import { MarkdownPage } from "@/components/Markdown";
 import { Metadata } from "next";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import fs from "fs";
 import path from "path";
 import { use } from 'react'
@@ -61,6 +62,7 @@ export default function DynamicPage(props: { params: Params }) {
           <MarkdownPage slug={slug} />
         </div>
       </div>
+      <Footer />
     </main>
   );
 }
