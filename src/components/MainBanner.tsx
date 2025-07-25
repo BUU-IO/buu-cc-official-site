@@ -62,9 +62,6 @@ export default function MainBanner() {
           <Link href="./wvpn/" className={styles.linkItem}>
             北京联合大学WebVPN链接转换
           </Link>
-          <Link href="./check_student/" className={styles.linkItem}>
-            学生信息验证
-          </Link>
           <p className={styles.moreText}>And More...</p>
         </div>
       </div>
